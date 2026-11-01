@@ -3,6 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Make window.fetch writable so browser extensions and interceptors can patch it without throwing getter-only TypeError
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var _currFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return _currFetch; },
+            set: function(fn) { _currFetch = fn; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // pass
+        }
+      })();
+    </script>
     <title>KKKV ENTERPRISE – Cyber Cafe &amp; Digital Services | Mysuru</title>
     <meta name="description" content="Mysuru's premier cyber cafe at #89, Sanchal House, 2nd Cross, Block 8. High-speed internet browsing, PC booking, color laser printing, Xerox, and online government portal services." />
     
