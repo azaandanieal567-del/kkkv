@@ -1,0 +1,6 @@
+{
+  "name": "KKKV ENTERPRISE - Cyber Cafe & Digital Services",
+  "description": "Premier cyber cafe in Mysuru offering high-speed workstation booking, laser printing, online government portal applications, xerox, and digital services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
